@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: problem-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: problem-1
+  template:
+    metadata:
+      labels:
+        name: problem-1
+    spec:
+      containers:
+      - name: problem-1
+        image: busybox555
+        command:
+        - sh
+        - "-c"
+        - echo Hello Kubernetes! && sleep 3600master
