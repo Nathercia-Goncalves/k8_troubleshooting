@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: problem-4
+  name: problem-5
   labels:
     app: nginx
 spec:
@@ -15,22 +15,22 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: problem-4
+      - name: problem-5
         image: nginx
         ports:
         - containerPort: 80  
         resources:
           limits:
             memory: 100Mi
-            cpu: .25
+            cpu: 1
           requests:
-            memory: 300Mi
-            cpu: 500m
+            memory: 3Mi
+            cpu: 5m
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: problem-4-service
+  name: problem-5-service
 spec:
   selector:
     app: nginx
