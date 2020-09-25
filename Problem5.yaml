@@ -7,6 +7,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: problem-5
+  namespace: problem5
   labels:
     app: nginx
 spec:
@@ -29,7 +30,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: problem-5-service
-  namespace: problem5
 spec:
   selector:
     app: nginx
